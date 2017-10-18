@@ -1,117 +1,122 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>商品价格信息管理</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Fonts -->
-    <!--#include file="/likeEating/views/common/link.html"-->
+    <!--#include file="/views/common/link.html"-->
 </head>
 
 <body class="flat-green">
     <div class="app-container expanded">
         <div class="row content-container">
-            <!--#include file="/likeEating/views/common/header.html"-->
-            <!--#include file="/likeEating/views/common/sidebar.html"-->
+            <!--#include file="/views/common/header.html"-->
+            <!--#include file="/views/common/sidebar.html"-->
             <!-- Main Content -->
             <div class="container-fluid">
                 <div class="side-body padding-top">
                     <div class="row">
-                       <div class="col-xs-12">
-                       <!-- 表格分页一系列js在142行 -->
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">
-                            <div class="title">商品价格信息管理</div>
+                        <div class="col-xs-12">
+                            <!-- 表格分页一系列js在142行 -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        <div class="title">商品价格信息管理</div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <table class="datatable table table-striped" cellspacing="0" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>序号</th>
+                                                <th>商品类别</th>
+                                                <th>商品名称</th>
+                                                <th>进货价格</th>
+                                                <th>市场价格</th>
+                                                <th>备注</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>水果类</td>
+                                                <td>苹果</td>
+                                                <td>2元/斤</td>
+                                                <td>3元/斤</td>
+                                                <td>好吃多汁，物美价廉</td>
+                                                <td>
+                                                    <a type="button" href="#" class="btn btn-info">代理商价格</a>
+                                                    <a type="button" href="#" class="btn btn-success">修改</a>
+                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>水果类</td>
+                                                <td>苹果</td>
+                                                <td>2元/斤</td>
+                                                <td>3元/斤</td>
+                                                <td>好吃多汁，物美价廉</td>
+                                                <td>
+                                                    <a type="button" href="#" class="btn btn-info">代理商价格</a>
+                                                    <a type="button" href="#" class="btn btn-success">修改</a>
+                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>水果类</td>
+                                                <td>苹果</td>
+                                                <td>2元/斤</td>
+                                                <td>3元/斤</td>
+                                                <td>好吃多汁，物美价廉</td>
+                                                <td>
+                                                    <a type="button" href="#" class="btn btn-info">代理商价格</a>
+                                                    <a type="button" href="#" class="btn btn-success">修改</a>
+                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>水果类</td>
+                                                <td>苹果</td>
+                                                <td>2元/斤</td>
+                                                <td>3元/斤</td>
+                                                <td>好吃多汁，物美价廉</td>
+                                                <td>
+                                                    <a type="button" href="#" class="btn btn-info">代理商价格</a>
+                                                    <a type="button" href="#" class="btn btn-success">修改</a>
+                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>序号</th>
+                                                <th>商品类别</th>
+                                                <th>商品名称</th>
+                                                <th>进货价格</th>
+                                                <th>市场价格</th>
+                                                <th>备注</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
                             </div>
+                            <a href="#" type="button" class="btn btn-success btn-add">添加</a>
                         </div>
-                       <div class="card-body">
-                        <table class="datatable table table-striped" cellspacing="0" width="100%">
-                            <thead >
-                                <tr>
-                                    <th>序号</th>
-                                    <th>商品类别</th>
-                                    <th>商品名称</th>
-                                    <th>进货价格</th>
-                                    <th>市场价格</th>
-                                    <th>备注</th>
-                                    <th>操作</th>
-                                </tr>
-                            </thead>
-                            
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>水果类</td>
-                                    <td>苹果</td>
-                                    <td>2元/斤</td>
-                                    <td>3元/斤</td>
-                                    <td>好吃多汁，物美价廉</td>
-                                    <td>
-                                        <a type="button" href="#" class="btn btn-info">代理商价格</a>
-										<a type="button" href="#" class="btn btn-success">修改</a>
-										<a type="button" href="#" class="btn btn-danger">删除</a>
-                                    </td>  
-                                </tr>
-                                 <tr>
-                                    <td>2</td>
-                                    <td>水果类</td>
-                                    <td>苹果</td>
-                                    <td>2元/斤</td>
-                                    <td>3元/斤</td>
-                                    <td>好吃多汁，物美价廉</td>
-                                    <td>
-                                        <a type="button" href="#" class="btn btn-info">代理商价格</a>
-                                        <a type="button" href="#" class="btn btn-success">修改</a>
-                                        <a type="button" href="#" class="btn btn-danger">删除</a>
-                                    </td>  
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>水果类</td>
-                                    <td>苹果</td>
-                                    <td>2元/斤</td>
-                                    <td>3元/斤</td>
-                                    <td>好吃多汁，物美价廉</td>
-                                    <td>
-                                        <a type="button" href="#" class="btn btn-info">代理商价格</a>
-                                        <a type="button" href="#" class="btn btn-success">修改</a>
-                                        <a type="button" href="#" class="btn btn-danger">删除</a>
-                                    </td>  
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>水果类</td>
-                                    <td>苹果</td>
-                                    <td>2元/斤</td>
-                                    <td>3元/斤</td>
-                                    <td>好吃多汁，物美价廉</td>
-                                    <td>
-                                        <a type="button" href="#" class="btn btn-info">代理商价格</a>
-                                        <a type="button" href="#" class="btn btn-success">修改</a>
-                                        <a type="button" href="#" class="btn btn-danger">删除</a>
-                                    </td>  
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>序号</th>
-                                    <th>商品类别</th>
-                                    <th>商品名称</th>
-                                    <th>进货价格</th>
-                                    <th>市场价格</th>
-                                    <th>备注</th>
-                                    <th>操作</th>
-                                </tr>
-                            </tfoot>
-                        </table>
                     </div>
                 </div>
-                <a href="#" type="button" class="btn btn-success btn-add">添加</a>
-               </div>
+                <!--#include file="/views/common/footer.html"-->
             </div>
         </div>
-        <!--#include file="/likeEating/views/common/footer.html"-->
-    </body>
-    <!--#include file="/likeEating/views/common/script.html"-->
+    </div>
+    <!--#include file="/views/common/script.html"-->
+</body>
+
 </html>
