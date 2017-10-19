@@ -28,36 +28,69 @@
                                 <div class="card-body">
                                     <form class="form-inline">
                                         <div class="form-group">
-                                            <label for="exampleInputName2">名称：</label>
-                                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                                            <label for="order">订单号：</label>
+                                            <input type="text" class="form-control" id="order" placeholder="请输入订单号">
                                         </div>
+                                        <div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail2">手机号：</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                                            <label for="date">销售日期：</label>
+                                            <input type="date" class="form-control" id="date">
                                         </div>
+                                        <div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                         <div class="form-group">
-                                            <label for="exampleInputName2">名称：</label>
-                                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                                            <label for="agent">代理商：</label>
+                                            <input type="text" class="form-control" id="agent" placeholder="请输入代理商名称">
                                         </div>
+                                        <div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                         <div class="form-group">
-                                            <label for="exampleInputEmail2">手机号：</label>
-                                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                                            <label for="seller">销售商：</label>
+                                            <input type="text" class="form-control" id="seller" placeholder="请输入销售商名称">
                                         </div>
-                                        <button type="submit" class="btn btn-success">查询</button>
                                     </form>
+                                    <div class="sub-title">按会员查询</div>
+                                    <form class="form-inline">
+                                        <div class="form-group">
+                                            <label for="cardId">卡号：</label>
+                                            <input type="text" class="form-control" id="cardId" placeholder="请输入会员卡号">
+                                        </div>
+                                        <div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="form-group">
+                                            <label for="name">姓名：</label>
+                                            <input type="text" class="form-control" id="name" placeholder="请输入会员姓名">
+                                        </div>
+                                        <div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="form-group">
+                                            <label for="idNumber">身份证号：</label>
+                                            <input type="text" class="form-control" id="idNumber" placeholder="请输入会员身份证号">
+                                        </div>
+                                        <div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="form-group">
+                                            <label for="phone">电话：</label>
+                                            <input type="text" class="form-control" id="phone" placeholder="请输入会员电话号码">
+                                        </div>
+                                        <div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                        <div class="form-group">
+                                            <label for="level">会员等级：</label>
+                                            <select id="level">
+                                                <option>青铜会员</option>
+                                                <option>白银会员</option>
+                                                <option>黄金会员</option>
+                                                <option>白金会员</option>
+                                                <option>钻石会员</option>
+                                                <option>至尊会员</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                    <div class="card-body pull-right">
+                                        <button type="submit" class="btn btn-success">查询</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <!-- 表格分页一系列js在142行 -->
                             <div class="card">
-                                <!-- <div class="card-header">
-                            <div class="card-title">
-                            <div class="title">入库查询</div>
-                            </div>
-                        </div> -->
                                 <div class="card-body">
                                     <table class="datatable table table-striped" cellspacing="0" width="100%">
                                         <thead>
