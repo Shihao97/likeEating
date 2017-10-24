@@ -33,6 +33,7 @@
                                                 <th>序号</th>
                                                 <th>名称</th>
                                                 <th>操作</th>
+                                                <th class="hidden"></th>
                                             </tr>
                                         </thead>
 
@@ -41,33 +42,37 @@
                                                 <td>1</td>
                                                 <td>超级管理员</td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success" id="edit">修改</button>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="roleId">62</td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
                                                 <td>管理员</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="roleId">63</td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
                                                 <td>经理</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="roleId">64</td>
                                             </tr>
                                             <tr>
                                                 <td>4</td>
                                                 <td>员工</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="roleId">65</td>
                                             </tr>
                                         </tbody>
                                         <tfoot>
@@ -75,6 +80,7 @@
                                                 <th>序号</th>
                                                 <th>名称</th>
                                                 <th>操作</th>
+                                                <th class="hidden"></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -98,39 +104,57 @@
                     <h4 class="modal-title" id="myModalLabel">角色添加</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="addRole">
                         <div class="form-group">
                             <label for="roleName">角色名称</label>
                             <input type="text" class="form-control" id="roleName" placeholder="请输入角色名称">
                         </div>
                         <div class="form-group">
                             <label>角色权限</label>
+                            <div>
+                                <div class="radio3 radio-check radio-inline">
+                                    <input type="radio" id="radio1" name="power" value="1">
+                                    <label for="radio1">
+                                        超级管理员
+                                    </label>
+                                </div>
+                                <div class="radio3 radio-check radio-inline">
+                                    <input type="radio" id="radio2" name="power" value="2">
+                                    <label for="radio2">
+                                        管理员
+                                    </label>
+                                </div>
+                                <div class="radio3 radio-check radio-inline">
+                                    <input type="radio" id="radio3" name="power" value="3">
+                                    <label for="radio3">
+                                        经理
+                                    </label>
+                                </div>
+                                <div class="radio3 radio-check radio-inline">
+                                    <input type="radio" id="radio4" name="power" value="4">
+                                    <label for="radio4">
+                                        员工
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success">提交</button>
+                    <button type="button" class="btn btn-success" id="addSubmit">提交</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade" id="test" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalEditRole" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content"></div>
+            <div class="modal-content">
+            </div>
         </div>
     </div>
     <!--#include file="/views/common/script.html"-->
-    <script>
-        $("#edit").click(function () {
-            $("#test").modal({
-                remote: "test.html"
-            });
-        })
-        $("#test").on("hidden.bs.modal", function () {
-            $(this).removeData("bs.modal");
-        });  
-    </script>
+    <script type="text/javascript" src="/js/system/role.js"></script>
 </body>
 
 </html>
