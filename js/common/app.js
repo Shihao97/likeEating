@@ -10,10 +10,6 @@ $(function() {
 });
 
 $(function() {
-  return $('select').select2();
-});
-
-$(function() {
   return $('.toggle-checkbox').bootstrapSwitch({
     size: "small"
   });

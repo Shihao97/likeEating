@@ -27,18 +27,18 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <table class="datatable table table-striped" cellspacing="0" width="100%">
+                                    <table class="datatable table table-striped" cellspacing="0" width="100%" id="list">
                                         <thead>
                                             <tr>
                                                 <th>序号</th>
-                                                <th>商品类别</th>
+                                                <th>商品类别</th>       
                                                 <th>商品名称</th>
                                                 <th>商品产地</th>
                                                 <th>商品规格</th>
                                                 <th>操作</th>
+                                                <th class="hidden"></th>
                                             </tr>
                                         </thead>
-
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
@@ -47,9 +47,10 @@
                                                 <td>山东青岛</td>
                                                 <td>15只装/箱</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="goodsId">23</td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
@@ -58,9 +59,10 @@
                                                 <td>湖南长沙</td>
                                                 <td>8只装/箱</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="goodsId">22</td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
@@ -69,9 +71,10 @@
                                                 <td>河南郑州</td>
                                                 <td>5斤装/箱</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="goodsId">21</td>
                                             </tr>
                                             <tr>
                                                 <td>4</td>
@@ -80,9 +83,10 @@
                                                 <td>吉林长春</td>
                                                 <td>2只装/箱</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="goodsId">20</td>
                                             </tr>
                                         </tbody>
                                         <tfoot>
@@ -93,6 +97,7 @@
                                                 <th>商品产地</th>
                                                 <th>商品规格</th>
                                                 <th>操作</th>
+                                                <th class="hidden"></th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -116,29 +121,29 @@
                     <h4 class="modal-title" id="myModalLabel">商品添加</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="addGoods">
                         <div class="row">
                             <div class="form-group col-lg-6">
-                                <label for="name">商品名称</label>
-                                <input type="text" class="form-control" id="name" placeholder="请输入商品名称" >
+                                <label for="goodsName">商品名称</label>
+                                <input type="text" class="form-control" id="goodsName" placeholder="请输入商品名称" >
                             </div>
                             <div class="form-group col-lg-6">
-                                <label for="spec">商品规格</label>
-                                <input type="text" class="form-control" id="spec" placeholder="请输入商品规格" >
+                                <label for="goodsSpec">商品规格</label>
+                                <input type="text" class="form-control" id="goodsSpec" placeholder="请输入商品规格" >
                             </div>
 
                         </div>
                         <div class="row">
                             <div class="form-group col-lg-6">
-                                <label for="area">商品产地</label>
-                                <div data-toggle="distpicker" id="area">
-                                    <select id="province"></select>
-                                    <select id="city"></select>
+                                <label for="goodsArea">商品产地</label>
+                                <div class="form-inline" data-toggle="distpicker" id="goodsArea">
+                                    <select class="form-control" id="province"></select>
+                                    <select class="form-control" id="city"></select>
                                 </div>
                             </div>
                             <div class="form-group col-lg-2">
-                                <label for="type">商品类别</label>
-                                <select class="form-control" id="type">
+                                <label for="goodsType">商品类别</label>
+                                <select class="form-control" id="goodsType">
                                     <option>海鲜类</option>
                                     <option>水果类</option>
                                     <option>蔬菜类</option>
@@ -149,13 +154,20 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success">提交</button>
+                    <button type="button" class="btn btn-success" id="addSubmit">提交</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modalEditGoods" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
     <!--#include file="/views/common/script.html"-->
+    <script type="text/javascript" src="/js/goods/goodsManager.js"></script>
 </body>
 
 </html>

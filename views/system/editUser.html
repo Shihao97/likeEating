@@ -67,12 +67,12 @@
 </div>
 <script>
     $("#editSubmit").click(function () {
-        var userName = $("#editUsername").val();
-        var phone = $("#editPhone").val();
+        var editUsername = $("#editUsername").val();
+        var editPhone = $("#editPhone").val();
         var oldPassword = $("#oldPassword").val();
         var editPassword = $("#editPassword").val();
         var re_editPassword = $("#re-editPassword").val();
-        var role = $("[name='editRole']").filter(":checked").val();
-        alert(userName + "+" + phone + "+" + oldPassword + "+" + editPassword + "+" + re_editPassword + "+" + role);
+        var editRole = $("[name='editRole']").filter(":checked").val();
+        alert(editUserName + "+" + editPhone + "+" + oldPassword + "+" + editPassword + "+" + re_editPassword + "+" + editRole);
     });
 </script>
