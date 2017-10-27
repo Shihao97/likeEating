@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <table class="datatable table table-striped" cellspacing="0" width="100%">
+                                    <table class="datatable table table-striped" cellspacing="0" width="100%" id="list">
                                         <thead>
                                             <tr>
                                                 <th>序号</th>
@@ -35,6 +35,7 @@
                                                 <th>供货商</th>
                                                 <th>花费</th>
                                                 <th>操作</th>
+                                                <th class="hidden"></th>
                                             </tr>
                                         </thead>
 
@@ -45,9 +46,10 @@
                                                 <td>超级管理员</td>
                                                 <td>17684373801</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-info detail">查看</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="orderNum">20170531</td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
@@ -55,9 +57,10 @@
                                                 <td>管理员</td>
                                                 <td>15764322090</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-info detail">查看</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="orderNum">20170530</td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
@@ -65,9 +68,10 @@
                                                 <td>经理</td>
                                                 <td>15764321968</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-info detail">查看</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="orderNum">20170529</td>
                                             </tr>
                                             <tr>
                                                 <td>4</td>
@@ -75,9 +79,10 @@
                                                 <td>员工</td>
                                                 <td>15764321234</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-info detail">查看</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="orderNum">20170528</td>
                                             </tr>
                                         </tbody>
                                         <tfoot>
@@ -87,12 +92,13 @@
                                                 <th>供货商</th>
                                                 <th>花费</th>
                                                 <th>操作</th>
+                                                <th class="hidden"></th>
                                             </tr>
                                         </tfoot>
                                     </table>
                                 </div>
                             </div>
-                            <a class="btn btn-success btn-add" data-toggle="modal" data-target="#modalAddOrder" role="button"> 添加</a>
+                            <a class="btn btn-success btn-add" id="addOrder" role="button"> 添加</a>
                         </div>
                     </div>
                 </div>
@@ -103,50 +109,17 @@
     <div class="modal fade" id="modalAddOrder" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">采购订单添加</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="order">订单号</label>
-                            <input type="text" class="form-control" id="order" placeholder="请输入采购订单号">
-                        </div>
-                        <div class="form-group">
-                            <label for="supplier">供货商</label>
-                            <input type="text" class="form-control" id="supplier" placeholder="请输入供货商名称">
-                        </div>
-                        <div class="row" id="item0">
-                            <div class="form-group col-lg-4">
-                                <label for="name0">商品名称</label>
-                                <input type="text" class="form-control" id="name0" placeholder="请输入商品名称">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label for="price0">商品进价</label>
-                                <input type="text" class="form-control" id="price0" placeholder="请输入商品进价">
-                            </div>
-                            <div class="form-group col-lg-4">
-                                <label for="count0">进货数量</label>
-                                <input type="number" class="form-control" id="count0" placeholder="请输入进货数量">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <a class="btn btn-link" role="button" id="addBankInfo">
-                                <span class="fa fa-plus-square"></span> 添加商品</a>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">提交</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalOrderDetail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
             </div>
         </div>
     </div>
     <!--#include file="/views/common/script.html"-->
+    <script type="text/javascript" src="/js/purchase/purchaseOrderList.js"></script>
 </body>
 
 </html>
