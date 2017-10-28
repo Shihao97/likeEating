@@ -27,7 +27,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <table class="datatable table table-striped" cellspacing="0" width="100%">
+                                    <table class="datatable table table-striped" cellspacing="0" width="100%" id="list">
                                         <thead>
                                             <tr>
                                                 <th>序号</th>
@@ -37,6 +37,7 @@
                                                 <th>联系方式</th>
                                                 <th>备注</th>
                                                 <th>操作</th>
+                                                <th class="hidden"></th>
                                             </tr>
                                         </thead>
 
@@ -49,9 +50,10 @@
                                                 <td>17684373801</td>
                                                 <td>性价比还OK</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">详情</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="custId">6</td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
@@ -61,9 +63,10 @@
                                                 <td>17684373801</td>
                                                 <td>性价比还OK</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">详情</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="custId">7</td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
@@ -73,9 +76,10 @@
                                                 <td>17684373801</td>
                                                 <td>性价比还OK</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">详情</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="custId">8</td>
                                             </tr>
                                             <tr>
                                                 <td>4</td>
@@ -85,9 +89,10 @@
                                                 <td>17684373801</td>
                                                 <td>性价比还OK</td>
                                                 <td>
-                                                    <a type="button" href="#" class="btn btn-success">详情</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
+                                                    <button type="button" class="btn btn-success edit">修改</button>
+                                                    <button type="button" class="btn btn-danger del">删除</button>
                                                 </td>
+                                                <td class="hidden" id="custId">9</td>
                                             </tr>
                                         </tbody>
                                         <tfoot>
@@ -99,12 +104,13 @@
                                                 <th>联系方式</th>
                                                 <th>备注</th>
                                                 <th>操作</th>
+                                                <th class="hidden"></th>
                                             </tr>
                                         </tfoot>
                                     </table>
                                 </div>
                             </div>
-                            <a class="btn btn-success btn-add" data-toggle="modal" data-target="#modalAddCustomer" role="button"> 添加</a>
+                            <a class="btn btn-success btn-add" data-toggle="modal" data-target="#modalAddCust" role="button"> 添加</a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +118,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modalAddCustomer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalAddCust" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -122,15 +128,15 @@
                     <h4 class="modal-title" id="myModalLabel">客户添加</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="addCust">
                         <div class="row">
                         <div class="form-group col-lg-6">
                             <label for="name">客户姓名</label>
                             <input type="text" class="form-control" id="name" placeholder="请输入客户姓名">
                         </div>
-                        <div class="form-group col-lg-2">
-                            <label for="type">客户类别</label>
-                            <select class="form-control" id="type">
+                        <div class="form-group col-lg-6">
+                            <label for="typeId">客户类别</label>
+                            <select class="form-control" id="typeId">
                                 <option>代理商</option>
                                 <option>销售商</option>
                                 <option>会员</option>
@@ -140,9 +146,9 @@
                         </div>
                         <div class="hidden" id="vipInfo">
                             <div class="row">
-                            <div class="form-group col-lg-2">
+                            <div class="form-group col-lg-3">
                                 <label for="level">会员等级</label>
-                                <select id="level">
+                                <select class="form-control" id="level">
                                     <option>青铜会员</option>
                                     <option>白银会员</option>
                                     <option>黄金会员</option>
@@ -151,7 +157,7 @@
                                     <option>至尊会员</option>
                                 </select>
                             </div>
-                            <div class="form-group col-lg-4">
+                            <div class="form-group col-lg-3">
                                     <label for="sex">性别</label>
                                     <input type="text" class="form-control" id="sex" placeholder="请输入会员性别" >
                                 </div>
@@ -230,13 +236,20 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success">提交</button>
+                    <button type="button" class="btn btn-success" id="addSubmit">提交</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modalEditCust" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
     <!--#include file="/views/common/script.html"-->
+    <script type="text/javascript" src="/js/sales/customerList.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-    <h4 class="modal-title" id="myModalLabel">采购订单添加</h4>
+    <h4 class="modal-title" id="myModalLabel">销售订单添加</h4>
 </div>
 <div class="modal-body">
     <form id="addOrder">
@@ -11,7 +11,7 @@
             <input type="text" class="form-control" id="order" placeholder="请输入采购订单号">
         </div>
         <div class="form-group">
-            <label for="supplier">供货商</label>
+            <label for="customer">客户姓名</label>
             <input type="text" class="form-control" id="supplier" placeholder="请输入供货商名称">
         </div>
         <div id="items">
@@ -21,11 +21,11 @@
                     <input type="text" class="form-control" id="name0" placeholder="请输入商品名称">
                 </div>
                 <div class="form-group col-lg-4">
-                    <label for="price0">商品进价</label>
+                    <label for="price0">商品售价</label>
                     <input type="text" class="form-control" id="price0" placeholder="请输入商品进价">
                 </div>
                 <div class="form-group col-lg-4">
-                    <label for="count0">进货数量</label>
+                    <label for="count0">售出数量</label>
                     <input type="number" class="form-control" id="count0" placeholder="请输入进货数量">
                 </div>
             </div>
@@ -52,11 +52,11 @@
             '<input type="text" class="form-control" id="name' + itemCnt + '" placeholder="请输入商品名称">' +
             '</div>' +
             '<div class="form-group col-lg-4">' +
-            '<label for="price' + itemCnt + '">商品进价</label>' +
+            '<label for="price' + itemCnt + '">商品售价</label>' +
             '<input type="text" class="form-control" id="price' + itemCnt + '" placeholder="请输入商品进价">' +
             '</div>' +
             '<div class="form-group col-lg-4">' +
-            '<label for="count' + itemCnt + '">进货数量</label>' +
+            '<label for="count' + itemCnt + '">售出数量</label>' +
             '<input type="number" class="form-control" id="count' + itemCnt + '" placeholder="请输入进货数量">' +
             '</div>' +
             '</div>';

@@ -15,7 +15,7 @@ $("#modalEditSupp").on("hidden.bs.modal", function () {
     $(this).removeData("bs.modal");
 });  
 
-$("#modalAddSupplier").on("hidden.bs.modal", function () {
+$("#modalAddSupp").on("hidden.bs.modal", function () {
     document.getElementById("addSupp").reset();
 });  
 

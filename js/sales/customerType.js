@@ -6,16 +6,16 @@ $(document).ready(function () {
 });
 
 $(".edit").click(function () {
-    $("#modalEditSuppType").modal({
-        remote: "../edit/editSupplierType.html"
+    $("#modalEditCustType").modal({
+        remote: "../edit/editCustomerType.html"
     });
 });
 
-$("#modalEditSuppType").on("hidden.bs.modal", function () {
+$("#modalEditCustType").on("hidden.bs.modal", function () {
     $(this).removeData("bs.modal");
 });  
 
-$("#modalAddSuppType").on("hidden.bs.modal", function () {
+$("#modalAddCustType").on("hidden.bs.modal", function () {
     document.getElementById("addType").reset();
 });  
 
@@ -26,6 +26,8 @@ $(".del").click(function(){
 
 $("#addSubmit").click(function(){
     var typeName=$("#typeName").val();
+    var isVIP=$("#isVIP").is(':checked');
+    var param=$("#param").val();
     var remark=$("#remark").val();
-    alert(typeName+"+"+remark);
+    alert(typeName+"+"+isVIP+"+"+param+"+"+remark);
 });
