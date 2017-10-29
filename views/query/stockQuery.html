@@ -34,7 +34,7 @@
                                         <div class="form-group">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
                                         <div class="form-group">
                                             <label for="goodsType">商品类别：</label>
-                                            <select id="goodsType">
+                                            <select class="form-control" id="goodsType">
                                                 <option>海鲜类</option>
                                                 <option>人参类</option>
                                                 <option>蔬菜类</option>
@@ -43,7 +43,7 @@
                                         </div>
                                     </form>
                                     <div class="card-body pull-right">
-                                        <button type="submit" class="btn btn-success">查询</button>
+                                        <button class="btn btn-success" id="searchSubmit">查询</button>
                                     </div>
                                 </div>
                             </div>
@@ -53,57 +53,39 @@
                         <div class="col-xs-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <table class="datatable table table-striped" cellspacing="0" width="100%">
+                                    <table class="datatable table table-striped" cellspacing="0" width="100%" id="list">
                                         <thead>
                                             <tr>
                                                 <th>序号</th>
                                                 <th>姓名</th>
                                                 <th>角色</th>
                                                 <th>手机号</th>
-                                                <th>操作</th>
                                             </tr>
                                         </thead>
-
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
                                                 <td>陶永攀</td>
                                                 <td>超级管理员</td>
                                                 <td>17684373801</td>
-                                                <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
-                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>2</td>
                                                 <td>石昊</td>
                                                 <td>管理员</td>
                                                 <td>15764322090</td>
-                                                <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
-                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>3</td>
                                                 <td>李成族</td>
                                                 <td>经理</td>
                                                 <td>15764321968</td>
-                                                <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
-                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>4</td>
                                                 <td>李帅鑫</td>
                                                 <td>员工</td>
                                                 <td>15764321234</td>
-                                                <td>
-                                                    <a type="button" href="#" class="btn btn-success">修改</a>
-                                                    <a type="button" href="#" class="btn btn-danger">删除</a>
-                                                </td>
                                             </tr>
                                         </tbody>
                                         <tfoot>
@@ -112,7 +94,6 @@
                                                 <th>用户名</th>
                                                 <th>角色</th>
                                                 <th>手机号</th>
-                                                <th>操作</th>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -126,6 +107,7 @@
         </div>
     </div>
     <!--#include file="/views/common/script.html"-->
+    <script type="text/javascript" src="/js/query/stockQuery.js"></script>
 </body>
 
 </html>
