@@ -7,7 +7,7 @@ $(document).ready(function () {
 
 $(".edit").click(function () {
     $("#modalEditUser").modal({
-        remote: "editUser.html"
+        remote: "edit/editUser.html"
     });
 });
 
