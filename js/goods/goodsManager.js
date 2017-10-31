@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('#list').dataTable({
-        "searching":false,
         "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 5 ] }]
     });
 });
@@ -15,19 +14,17 @@ $("#modalEditGoods").on("hidden.bs.modal", function () {
     $(this).removeData("bs.modal");
 });  
 
+$("#add").click(function(){
+    $("#modalAddGoods").modal({
+        remote: "edit/addManager.html"
+    });
+});
+
 $("#modalAddGoods").on("hidden.bs.modal", function () {
-    document.getElementById("addGoods").reset();
+    $(this).removeData("bs.modal");
 });  
 
 $(".del").click(function(){
     var id=$(this).parents("tr").find("#goodsId").text();
     alert("点击删除"+id);
-});
-
-$("#addSubmit").click(function(){
-    var goodsName=$("#goodsName").val();
-    var goodsSpec=$("#goodsSpec").val();
-    var area=$("#province").select().val()+$("#city").select().val();
-    var goodsType=$("#goodsType").select().val();
-    alert(goodsName+"+"+goodsSpec+"+"+area+"+"+goodsType);
 });

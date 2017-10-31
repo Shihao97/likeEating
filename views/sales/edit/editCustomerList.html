@@ -23,7 +23,7 @@
         </div>
         <div class="hidden" id="editVipInfo">
             <div class="row">
-                <div class="form-group col-lg-2">
+                <div class="form-group col-lg-3">
                     <label for="editLevel">会员等级</label>
                     <select class="form-control" id="editLevel">
                         <option>青铜会员</option>
@@ -34,7 +34,7 @@
                         <option>至尊会员</option>
                     </select>
                 </div>
-                <div class="form-group col-lg-4">
+                <div class="form-group col-lg-3">
                     <label for="editSex">性别</label>
                     <input type="text" class="form-control" id="editSex" placeholder="请输入会员性别">
                 </div>
@@ -79,7 +79,7 @@
             <input type="text" class="form-control" id="editRemark" placeholder="请输入客户备注">
         </div>
         <div class="form-group">
-            <a class="btn btn-link" role="button" id="editBankInfo">
+            <a class="btn btn-link" role="button" id="toEditBankInfo">
                 <span class="fa fa-bank"></span> 编辑银行信息</a>
         </div>
         <div class="row hidden" id="editBankInfo">
@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="form-group">
-            <a class="btn btn-link" role="button" id="editContact">
+            <a class="btn btn-link" role="button" id="toEditContact">
                 <span class="fa fa-phone"></span> 编辑其他联系信息</a>
         </div>
         <div class="row hidden" id="editContact">
@@ -130,7 +130,7 @@
         }
     });
 
-    $("#editBankInfo").click(function () {
+    $("#toEditBankInfo").click(function () {
         if (editBankInfoDisplay == false) {
             $("#editBankInfo").removeClass('hidden');
             editBankInfoDisplay = true;
@@ -140,7 +140,7 @@
         }
     });
 
-    $("#editContact").click(function () {
+    $("#toEditContact").click(function () {
         if (editContactDisplay == false) {
             $("#editContact").removeClass('hidden');
             editContactDisplay = true;

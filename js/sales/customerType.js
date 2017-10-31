@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('#list').dataTable({
-        "searching":false,
         "aoColumnDefs": [ { "bSortable": false, "aTargets": [ 3 ] }]
     });
 });
